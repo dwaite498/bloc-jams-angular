@@ -1,7 +1,7 @@
 <main class="album-view container narrow">
      <section class="clearfix">
          <div class="column half">
-             <img ng-src="{{ albumArtURL }}" class="album-cover-art">
+             <img ng-src=" {{ album.albumData.albumArtURL }} " class="album-cover-art" alt=" {{ album.title }} cover art"/>
          </div>
          <div class="album-view-details column half">
              <h2 class="album-view-title" ui-sref="album"> {{album.title}} </h2>

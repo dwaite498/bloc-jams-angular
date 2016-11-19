@@ -1,6 +1,7 @@
 
 .album-covers {
-     position: relative;
+    height: 150px;
+    width: 150px;
  }
  
  .collection-album-container {
@@ -8,7 +9,9 @@
      margin-top: 30px;
      margin-bottom: 20px;
      text-align: center;
+
  }
+
  
  .collection-album-container .caption {
      margin-top: 10px;
@@ -31,3 +34,7 @@
  .collection-album-container img {
      width: 80%;
  }
+
+div img {
+    border: 2px solid white;
+}
