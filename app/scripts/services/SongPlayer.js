@@ -1,9 +1,9 @@
 (function () {
-    function SongPlayer() {
+    function SongPlayer(Fixtures) {
         var SongPlayer = {};
-        /** @desc current song file 
+        /** @desc current currently playing album 
         *   @type {object}*/
-
+        var currentAlbum = Fixtures.getAlbum();
 
         var currentBuzzObject = null;
         /** @function playSong
@@ -65,6 +65,26 @@
             song = song || SongPlayer.currentSong;
             currentBuzzObject.pause();
             song.playing = false;
+        }
+        /** @function SongPLayer.previous
+        *   @desc retrieves current song index and returns it 
+        *    after decrementing.
+        */
+        SongPlayer.previous = function() {
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex--;
+            
+            if(currentSongIndex < 0) {
+                currentBuzzObject.stop;
+                SongPlayer.currentSong.playing = null;
+            } else {
+                song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+            };
+        }
+            
+         
         }
         
         return SongPlayer;
