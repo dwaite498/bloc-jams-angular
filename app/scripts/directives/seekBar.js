@@ -8,11 +8,11 @@
             offsetXPercent = Math.max(0, offsetXPercent);
             offsetXPercent = Math.min(1, offsetXPercent);
             return offsetXPercent;
- };
+        };
         
         return {
             templateUrl: '/templates/directives/seek_bar.html',
-            replace: true;
+            replace: true,
             restrict: 'E',
             scope: { },
             link: function(scope, element, attributes) {
