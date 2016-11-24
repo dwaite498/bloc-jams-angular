@@ -29,8 +29,10 @@
                 };
                 
                 scope.fillStyle = function () {
-                    return {width: percentString()};
+                    return {location: percentString()};
                 }
+                
+                
                 
                 scope.onClickSeekBar = function(event) {
                     var percent = calculatePercent(seekBar, event);
@@ -50,6 +52,9 @@
                         $document.unbind('mouseup.thumb');
                     });
                 };
+                scope.thumbStyle = function () {
+                    return {location: percentString()};
+                }
             }
         };
     }
