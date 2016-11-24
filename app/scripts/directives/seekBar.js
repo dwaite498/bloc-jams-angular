@@ -29,7 +29,11 @@
                 };
                 
                 scope.fillStyle = function () {
-                    return {location: percentString()};
+                    return {width: percentString()};
+                }
+                
+                scope.thumbStyle = function () {
+                    return {left: percentString()};
                 }
                 
                 
@@ -52,9 +56,6 @@
                         $document.unbind('mouseup.thumb');
                     });
                 };
-                scope.thumbStyle = function () {
-                    return {location: percentString()};
-                }
             }
         };
     }
