@@ -145,7 +145,13 @@
         */
         SongPlayer.setVolume = function(volume) {
             currentBuzzObject.setVolume(volume);
+            SongPlayer.volume = volume;
         }
+        
+        SongPlayer.mute = function (event) {
+                currentBuzzObject.toggleMute(event);
+        }
+        
             
          return SongPlayer;
     }
