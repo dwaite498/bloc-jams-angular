@@ -4,9 +4,9 @@
              <img ng-src=" {{ album.albumData.albumArtURL }} " class="album-cover-art" alt=" {{ album.albumData.title }} cover art"/>
          </div>
          <div class="album-view-details column half">
-             <h2 class="album-view-title" ui-sref="album"> {{album.title}} </h2>
-             <h3 class="album-view-artist"> {{artist}} </h3>
-             <h5 class="album-view-release-info">{{year+ " "+ label}}</h5>
+             <h2 class="album-view-title" ui-sref="album"> {{album.albumData.title}} </h2>
+             <h3 class="album-view-artist"> {{album.albumData.artist}} </h3>
+             <h5 class="album-view-release-info">{{ album.albumData.year + " - " + album.albumData.label }}</h5>
          </div>
      </section>
      <table class="album-view-song-list">
