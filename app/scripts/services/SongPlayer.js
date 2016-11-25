@@ -57,6 +57,8 @@
             SongPlayer.currentSong = song;
         };
         
+        SongPlayer.volume = 50;
+        
         /** @desc current song file 
         *   @type {object}*/
         SongPlayer.currentSong = null;
@@ -82,7 +84,8 @@
             }   
             
             
-        };
+        }
+        ;
         /** @function 
         *   @desc pauses the song when called
         *   @param {object} song
@@ -135,6 +138,14 @@
                 currentBuzzObject.setTime(time);
             }
         };
+        
+        /* @func setVolume
+        *  @desc changes current sound volume based on click placement on volume bar
+        *  @param {number} volume
+        */
+        SongPlayer.setVolume = function(volume) {
+            currentBuzzObject.setVolume(volume);
+        }
             
          return SongPlayer;
     }
