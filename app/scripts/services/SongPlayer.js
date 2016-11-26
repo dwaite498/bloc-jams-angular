@@ -152,6 +152,11 @@
                 currentBuzzObject.toggleMute(event);
         }
         
+        SongPlayer.autoNext = function (event) {
+            consolelog(playerBar.SongBar.currentTime);
+            SongPlayer.next();
+        }
+        
             
          return SongPlayer;
     }
